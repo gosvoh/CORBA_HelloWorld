@@ -8,7 +8,7 @@
 int main(int argc, char *argv[]) {
     try {
         if (argc != 2) {
-            std::cerr << "Usage: client <IOR>" << std::endl;
+            std::cerr << "Usage: client <IOR> or <ior.txt>" << std::endl;
             return 1;
         }
         CORBA::ORB_var orbVar = CORBA::ORB_init(argc, argv);
