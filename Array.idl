@@ -1,0 +1,6 @@
+module SevenTest {
+    typedef sequence<double> DoubleArray;
+    interface Sender {
+        void send(inout DoubleArray Array, in double constanta);
+    };
+};
