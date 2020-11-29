@@ -1,14 +1,17 @@
+//
+// Created by gosvoh on 22.11.2020.
+//
+
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
 #include <string>
 #include <random>
-
 #include "Array.h"
 
 #define ARRAY_SIZE 10
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
     try {
         if (argc != 2) {
             std::cerr << "Usage: client <IOR> or <ior.txt>" << std::endl;

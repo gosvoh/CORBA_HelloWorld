@@ -1,3 +1,7 @@
+//
+// Created by gosvoh on 22.11.2020.
+//
+
 #include <iostream>
 #include <fstream>
 #include "Array.h"
@@ -12,12 +16,6 @@ int main(int argc, char **argv) {
         PortableServer::Servant_var<SenderImpl> server = new SenderImpl();
         rootPoa->activate_object(server);
         std::cout << "Root activated" << std::endl;
-
-        /*PortableServer::POAManager_var poaMngr = rootPoa->the_POAManager();
-        CORBA::PolicyList policyList;
-        policyList.length(1);
-        policyList[0] = rootPoa->create_lifespan_policy(PortableServer::PERSISTENT);
-        PortableServer::POA_var myPOA = rootPoa->create_POA("MyPOA", poaMngr, policyList);*/
 
         CORBA::String_var sior(orb->object_to_string(server->_this()));
         std::cout << sior << std::endl;

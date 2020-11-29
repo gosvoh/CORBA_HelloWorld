@@ -2,8 +2,6 @@
 // Created by gosvoh on 28.11.2020.
 //
 
-// & - адрес в памяти
-
 #include "Array.h"
 #include <iostream>
 
